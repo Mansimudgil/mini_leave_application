@@ -45,8 +45,8 @@ A simple web application for employees to apply for leave (Casual/Sick) and mana
 ## 🤖 AI Tools Disclosure
 
 ### Tools Used
-- **AI Tool**: Gemini 3.8 Flash (via Antigravity)
-- **Used For**: Initial project scaffolding, creating the Express API routes, setting up the React components, and writing tests.
+- **AI Tool**: Claude (Claude Code)
+- **Used For**: Initial project scaffolding, creating Express API routes, setting up React components, and writing tests.
 
 ### What Was Generated Incorrectly & Changed
 1. **Date Timezone Shift**:
