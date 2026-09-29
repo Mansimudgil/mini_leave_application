@@ -13,11 +13,10 @@ export default function Navbar({
     <header className="navbar">
       <div className="brand-section">
         <div className="brand-icon">
-          <Calendar size={22} color="#ffffff" />
+          <Calendar size={20} color="#ffffff" />
         </div>
         <div>
-          <span className="brand-name">TimeOff HQ</span>
-          <span className="brand-tag">v1.0</span>
+          <span className="brand-name">Leave Management System</span>
         </div>
       </div>
 

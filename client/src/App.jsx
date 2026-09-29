@@ -89,8 +89,8 @@ export default function App() {
       <main className="main-content">
         {loading && employees.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '5rem 1rem' }}>
-            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
-              Loading TimeOff Portal...
+            <div style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-muted)' }}>
+              Loading Leave Management System...
             </div>
           </div>
         ) : currentView === 'employee' ? (

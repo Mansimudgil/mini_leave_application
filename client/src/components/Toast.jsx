@@ -13,7 +13,7 @@ export default function ToastContainer({ toasts, onDismiss }) {
           ) : toast.type === 'error' ? (
             <AlertCircle size={18} color="#ef4444" />
           ) : (
-            <Info size={18} color="#6366f1" />
+            <Info size={18} color="#e91e63" />
           )}
           <span style={{ flex: 1 }}>{toast.message}</span>
           <button

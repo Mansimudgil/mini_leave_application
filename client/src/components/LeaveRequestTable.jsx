@@ -47,7 +47,7 @@ export default function LeaveRequestTable({ requests, showEmployeeCol = false, t
     <div className="content-section">
       <div className="section-header">
         <div className="section-title">
-          <Calendar size={18} color="#6366f1" />
+          <Calendar size={18} color="#e91e63" />
           <span>{title}</span>
           <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>
             ({filteredRequests.length})

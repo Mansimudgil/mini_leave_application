@@ -150,7 +150,7 @@ export default function ApplyLeaveModal({
       >
         <div className="modal-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <Calendar size={20} color="#6366f1" />
+            <Calendar size={20} color="#e91e63" />
             <h2 id="modal-title">Apply for Leave</h2>
           </div>
           <button

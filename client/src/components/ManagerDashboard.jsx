@@ -73,41 +73,41 @@ export default function ManagerDashboard({
         <div className="stat-metric-card" style={{ borderLeft: '4px solid #f59e0b' }}>
           <div className="stat-metric-info">
             <h4>Pending Reviews</h4>
-            <span style={{ color: '#fbbf24' }}>{pendingRequests.length}</span>
+            <span style={{ color: '#b78103' }}>{pendingRequests.length}</span>
           </div>
           <Clock size={28} color="#f59e0b" />
         </div>
 
-        <div className="stat-metric-card" style={{ borderLeft: '4px solid #10b981' }}>
+        <div className="stat-metric-card" style={{ borderLeft: '4px solid #2e7d32' }}>
           <div className="stat-metric-info">
             <h4>Approved Requests</h4>
-            <span style={{ color: '#34d399' }}>{approvedRequests.length}</span>
+            <span style={{ color: '#2e7d32' }}>{approvedRequests.length}</span>
           </div>
-          <CheckCircle2 size={28} color="#10b981" />
+          <CheckCircle2 size={28} color="#2e7d32" />
         </div>
 
-        <div className="stat-metric-card" style={{ borderLeft: '4px solid #ef4444' }}>
+        <div className="stat-metric-card" style={{ borderLeft: '4px solid #c62828' }}>
           <div className="stat-metric-info">
             <h4>Rejected Requests</h4>
-            <span style={{ color: '#f87171' }}>{rejectedRequests.length}</span>
+            <span style={{ color: '#c62828' }}>{rejectedRequests.length}</span>
           </div>
-          <XCircle size={28} color="#ef4444" />
+          <XCircle size={28} color="#c62828" />
         </div>
 
-        <div className="stat-metric-card" style={{ borderLeft: '4px solid #6366f1' }}>
+        <div className="stat-metric-card" style={{ borderLeft: '4px solid #e91e63' }}>
           <div className="stat-metric-info">
             <h4>Total Submissions</h4>
-            <span style={{ color: '#a5b4fc' }}>{requests.length}</span>
+            <span style={{ color: '#c2185b' }}>{requests.length}</span>
           </div>
-          <FileCheck size={28} color="#6366f1" />
+          <FileCheck size={28} color="#e91e63" />
         </div>
       </div>
 
       {/* Pending Approvals Action Table */}
-      <div className="content-section" style={{ border: '1px solid rgba(245, 158, 11, 0.3)' }}>
+      <div className="content-section" style={{ border: '1.5px solid var(--pink-border)' }}>
         <div className="section-header">
           <div className="section-title">
-            <Clock size={19} color="#f59e0b" />
+            <Clock size={19} color="#e91e63" />
             <span>Pending Leave Requests Requiring Action</span>
             <span className="badge badge-pending">{pendingRequests.length} awaiting review</span>
           </div>
@@ -207,7 +207,7 @@ export default function ManagerDashboard({
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <MessageSquare size={18} color="#6366f1" />
+                <MessageSquare size={18} color="#e91e63" />
                 <h2>
                   Confirm {commentModal.action === 'approve' ? 'Approval' : 'Rejection'}
                 </h2>
