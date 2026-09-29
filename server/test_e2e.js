@@ -38,8 +38,8 @@ async function runTests() {
     const empRes = await fetch(`${BASE_URL}/employees`);
     const empData = await empRes.json();
     assert(empRes.status === 200 && empData.count >= 4, `Loaded ${empData.count} seed employees`);
-    const aarav = empData.data.find(e => e.employeeId === 'EMP001');
-    assert(aarav !== undefined, 'Found employee Aarav Sharma (EMP001)');
+    const mansi = empData.data.find(e => e.employeeId === 'EMP001');
+    assert(mansi !== undefined, 'Found employee Mansi Sharma (EMP001)');
 
     // Test 3: Weekend Handling & Working Days Calculation
     console.log('\n[3] Testing Weekend Calculation (Fri Oct 9 to Mon Oct 12, 2026):');
@@ -128,10 +128,10 @@ async function runTests() {
 
     // Test 8: Manager Approval & Balance Deduction
     console.log('\n[8] Testing Manager Approval & Correct Balance Deduction:');
-    // Get Aarav's balance before approval
-    const aaravBeforeRes = await fetch(`${BASE_URL}/employees/EMP001`);
-    const aaravBefore = await aaravBeforeRes.json();
-    const balanceBefore = aaravBefore.data.leaveBalances.casual;
+    // Get Mansi's balance before approval
+    const mansiBeforeRes = await fetch(`${BASE_URL}/employees/EMP001`);
+    const mansiBefore = await mansiBeforeRes.json();
+    const balanceBefore = mansiBefore.data.leaveBalances.casual;
 
     const approveRes = await fetch(`${BASE_URL}/leaves/${newRequestId}/review`, {
       method: 'PATCH',
@@ -147,9 +147,9 @@ async function runTests() {
     assert(approveData.data.leaveRequest.status === 'Approved', 'Status updated to Approved');
 
     // Verify balance was deducted by workingDays (3)
-    const aaravAfterRes = await fetch(`${BASE_URL}/employees/EMP001`);
-    const aaravAfter = await aaravAfterRes.json();
-    const balanceAfter = aaravAfter.data.leaveBalances.casual;
+    const mansiAfterRes = await fetch(`${BASE_URL}/employees/EMP001`);
+    const mansiAfter = await mansiAfterRes.json();
+    const balanceAfter = mansiAfter.data.leaveBalances.casual;
     assert(balanceAfter === balanceBefore - 3, `Leave balance deducted correctly: ${balanceBefore} -> ${balanceAfter}`);
 
     // Test 9: Prevent Double Action on Reviewed Request

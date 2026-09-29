@@ -12,7 +12,7 @@ A simple web application for employees to apply for leave (Casual/Sick) and mana
 ---
 
 ## 📌 Links
-- **GitHub Repository**: `https://github.com/<your-username>/leave-management-system`
+- **GitHub Repository**: https://github.com/Mansimudgil/mini_leave_application
 - **Live Application**: `https://<your-deployed-app>.vercel.app`
 
 ---
@@ -62,7 +62,7 @@ A simple web application for employees to apply for leave (Casual/Sick) and mana
 1. Standard work week is Monday to Friday. Saturday and Sunday are off.
 2. Initial leave quota is **10 Casual days** and **10 Sick days** per employee.
 3. Pre-seeded employee accounts for quick testing:
-   - **Aarav Sharma** (`EMP001`, Engineering)
+   - **Mansi Sharma** (`EMP001`, Engineering)
    - **Priya Patel** (`EMP002`, Manager)
    - **Rohan Verma** (`EMP003`, Sales)
    - **Ananya Iyer** (`EMP004`, Design)
@@ -81,8 +81,8 @@ A simple web application for employees to apply for leave (Casual/Sick) and mana
 
 1. **Clone the repository**:
    ```bash
-   git clone <YOUR_GITHUB_REPO_URL>
-   cd leave_application
+   git clone https://github.com/Mansimudgil/mini_leave_application.git
+   cd mini_leave_application
    ```
 
 2. **Install dependencies**:

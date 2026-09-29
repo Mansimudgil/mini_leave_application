@@ -9,8 +9,8 @@ const seedDefaultEmployees = async () => {
       const seedData = [
         {
           employeeId: 'EMP001',
-          name: 'Aarav Sharma',
-          email: 'aarav.sharma@example.com',
+          name: 'Mansi Sharma',
+          email: 'mansi.sharma@example.com',
           department: 'Engineering',
           role: 'employee',
           leaveBalances: { casual: 10, sick: 10 },
