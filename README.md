@@ -13,7 +13,7 @@ A simple web application for employees to apply for leave (Casual/Sick) and mana
 
 ## 📌 Links
 - **GitHub Repository**: https://github.com/Mansimudgil/mini_leave_application
-- **Live Application**: https://minileaveapplication.vercel.app
+- **Live Application**: [Leave Management System](https://minileaveapplication-zswj.vercel.app/)
 
 ---
 
