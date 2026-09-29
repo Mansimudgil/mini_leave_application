@@ -83,7 +83,12 @@ A modern, full-stack leave management application built with **Node.js, Express,
 1. **Working Days**: Monday through Friday are standard working days; Saturday and Sunday are non-working days. Public holidays are not factored into this mini-assessment.
 2. **Leave Quotas**: Each employee starts with separate quotas for **Casual Leave** (10 days) and **Sick Leave** (10 days).
 3. **Database Flexibility**: Default config connects to MongoDB Atlas or local MongoDB if `MONGODB_URI` is provided in `.env`. If not provided, it automatically boots up an in-memory MongoDB server for instant zero-friction evaluation.
-4. **Manager Authentication**: For assessment review ease, a dual-portal view switcher and employee dropdown allow instant switching between employee and manager roles without requiring a multi-step login flow.
+4. **Manager Authentication & Profiles**: For assessment review ease, a dual-portal view switcher and employee dropdown allow instant switching between employee and manager roles without requiring a multi-step login flow. Sample seeded profiles:
+   - **Aarav Sharma** (`EMP001` - Engineering, Employee)
+   - **Priya Patel** (`EMP002` - Operations & Management, Manager)
+   - **Rohan Verma** (`EMP003` - Sales, Employee)
+   - **Ananya Iyer** (`EMP004` - Product Design, Employee)
+   - **Vikram Singh** (`EMP005` - Marketing, Employee)
 
 ---
 

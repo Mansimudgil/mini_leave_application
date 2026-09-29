@@ -9,8 +9,8 @@ const seedDefaultEmployees = async () => {
       const seedData = [
         {
           employeeId: 'EMP001',
-          name: 'Sarah Connor',
-          email: 'sarah.connor@example.com',
+          name: 'Aarav Sharma',
+          email: 'aarav.sharma@example.com',
           department: 'Engineering',
           role: 'employee',
           leaveBalances: { casual: 10, sick: 10 },
@@ -18,17 +18,17 @@ const seedDefaultEmployees = async () => {
         },
         {
           employeeId: 'EMP002',
-          name: 'Michael Scott',
-          email: 'michael.scott@example.com',
-          department: 'Management',
+          name: 'Priya Patel',
+          email: 'priya.patel@example.com',
+          department: 'Operations & Management',
           role: 'manager',
           leaveBalances: { casual: 12, sick: 10 },
           initialBalances: { casual: 12, sick: 10 }
         },
         {
           employeeId: 'EMP003',
-          name: 'Jim Halpert',
-          email: 'jim.halpert@example.com',
+          name: 'Rohan Verma',
+          email: 'rohan.verma@example.com',
           department: 'Sales',
           role: 'employee',
           leaveBalances: { casual: 4, sick: 5 },
@@ -36,11 +36,20 @@ const seedDefaultEmployees = async () => {
         },
         {
           employeeId: 'EMP004',
-          name: 'Pam Beesly',
-          email: 'pam.beesly@example.com',
-          department: 'Design',
+          name: 'Ananya Iyer',
+          email: 'ananya.iyer@example.com',
+          department: 'Product Design',
           role: 'employee',
           leaveBalances: { casual: 8, sick: 7 },
+          initialBalances: { casual: 10, sick: 10 }
+        },
+        {
+          employeeId: 'EMP005',
+          name: 'Vikram Singh',
+          email: 'vikram.singh@example.com',
+          department: 'Marketing',
+          role: 'employee',
+          leaveBalances: { casual: 10, sick: 10 },
           initialBalances: { casual: 10, sick: 10 }
         }
       ];

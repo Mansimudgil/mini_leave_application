@@ -53,16 +53,25 @@ const getEmployeeById = async (req, res) => {
  */
 const resetBalances = async (req, res) => {
   try {
-    const employees = await Employee.find();
-    for (const emp of employees) {
-      emp.leaveBalances.casual = emp.initialBalances.casual || 10;
-      emp.leaveBalances.sick = emp.initialBalances.sick || 10;
-      await emp.save();
+    const seedData = [
+      { employeeId: 'EMP001', name: 'Aarav Sharma', email: 'aarav.sharma@example.com', department: 'Engineering', role: 'employee', leaveBalances: { casual: 10, sick: 10 }, initialBalances: { casual: 10, sick: 10 } },
+      { employeeId: 'EMP002', name: 'Priya Patel', email: 'priya.patel@example.com', department: 'Operations & Management', role: 'manager', leaveBalances: { casual: 12, sick: 10 }, initialBalances: { casual: 12, sick: 10 } },
+      { employeeId: 'EMP003', name: 'Rohan Verma', email: 'rohan.verma@example.com', department: 'Sales', role: 'employee', leaveBalances: { casual: 4, sick: 5 }, initialBalances: { casual: 10, sick: 10 } },
+      { employeeId: 'EMP004', name: 'Ananya Iyer', email: 'ananya.iyer@example.com', department: 'Product Design', role: 'employee', leaveBalances: { casual: 8, sick: 7 }, initialBalances: { casual: 10, sick: 10 } },
+      { employeeId: 'EMP005', name: 'Vikram Singh', email: 'vikram.singh@example.com', department: 'Marketing', role: 'employee', leaveBalances: { casual: 10, sick: 10 }, initialBalances: { casual: 10, sick: 10 } }
+    ];
+
+    for (const item of seedData) {
+      await Employee.findOneAndUpdate(
+        { employeeId: item.employeeId },
+        { $set: item },
+        { upsert: true, new: true }
+      );
     }
 
     res.json({
       success: true,
-      message: 'Leave balances reset to default quotas'
+      message: 'Leave balances and employee profiles reset successfully'
     });
   } catch (error) {
     res.status(500).json({

@@ -35,8 +35,8 @@ async function runTests() {
     const empRes = await fetch(`${BASE_URL}/employees`);
     const empData = await empRes.json();
     assert(empRes.status === 200 && empData.count >= 4, `Loaded ${empData.count} seed employees`);
-    const sarah = empData.data.find(e => e.employeeId === 'EMP001');
-    assert(sarah !== undefined, 'Found employee Sarah Connor (EMP001)');
+    const aarav = empData.data.find(e => e.employeeId === 'EMP001');
+    assert(aarav !== undefined, 'Found employee Aarav Sharma (EMP001)');
 
     // Test 3: Weekend Handling & Working Days Calculation
     console.log('\n[3] Testing Weekend Calculation (Fri Oct 9 to Mon Oct 12, 2026):');
@@ -108,7 +108,7 @@ async function runTests() {
 
     // Test 7: Edge Case - Insufficient Balance
     console.log('\n[7] Testing Edge Case: Insufficient Balance:');
-    // Jim Halpert has casual balance 4
+    // Rohan Verma has casual balance 4
     const exceedRes = await fetch(`${BASE_URL}/leaves/apply`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -125,10 +125,10 @@ async function runTests() {
 
     // Test 8: Manager Approval & Balance Deduction
     console.log('\n[8] Testing Manager Approval & Correct Balance Deduction:');
-    // Get Sarah's balance before approval
-    const sarahBeforeRes = await fetch(`${BASE_URL}/employees/EMP001`);
-    const sarahBefore = await sarahBeforeRes.json();
-    const balanceBefore = sarahBefore.data.leaveBalances.casual;
+    // Get Aarav's balance before approval
+    const aaravBeforeRes = await fetch(`${BASE_URL}/employees/EMP001`);
+    const aaravBefore = await aaravBeforeRes.json();
+    const balanceBefore = aaravBefore.data.leaveBalances.casual;
 
     const approveRes = await fetch(`${BASE_URL}/leaves/${newRequestId}/review`, {
       method: 'PATCH',
@@ -144,9 +144,9 @@ async function runTests() {
     assert(approveData.data.leaveRequest.status === 'Approved', 'Status updated to Approved');
 
     // Verify balance was deducted by workingDays (3)
-    const sarahAfterRes = await fetch(`${BASE_URL}/employees/EMP001`);
-    const sarahAfter = await sarahAfterRes.json();
-    const balanceAfter = sarahAfter.data.leaveBalances.casual;
+    const aaravAfterRes = await fetch(`${BASE_URL}/employees/EMP001`);
+    const aaravAfter = await aaravAfterRes.json();
+    const balanceAfter = aaravAfter.data.leaveBalances.casual;
     assert(balanceAfter === balanceBefore - 3, `Leave balance deducted correctly: ${balanceBefore} -> ${balanceAfter}`);
 
     // Test 9: Prevent Double Action on Reviewed Request
