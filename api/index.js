@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 dotenv.config();
+mongoose.set('bufferCommands', false);
 
 const app = express();
 app.use(cors());
