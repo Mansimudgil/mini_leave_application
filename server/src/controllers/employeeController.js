@@ -1,4 +1,5 @@
 const Employee = require('../models/Employee');
+const LeaveRequest = require('../models/LeaveRequest');
 
 /**
  * Get all employees
@@ -68,6 +69,9 @@ const resetBalances = async (req, res) => {
         { upsert: true, new: true }
       );
     }
+
+    // Clear old requests on demo reset for clean state
+    await LeaveRequest.deleteMany({});
 
     res.json({
       success: true,

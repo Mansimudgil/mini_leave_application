@@ -24,6 +24,9 @@ async function runTests() {
   }
 
   try {
+    // Reset test state to clean baseline
+    await fetch(`${BASE_URL}/employees/reset-balances`, { method: 'POST' });
+
     // Test 1: Health Check
     console.log('[1] Testing Health Check:');
     const healthRes = await fetch(`${BASE_URL}/health`);
